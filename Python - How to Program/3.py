@@ -121,6 +121,12 @@ decimal = 0
 binary = input("Enter a binary number: ")
 index = len(binary) - 1
 
+
+def add(num1, num2):
+    sum = num1 +num2
+    return  sum
+
+
 # convert each binary digit to a decimal value based on its position and add it to the decimal total
 for digit in binary:
     print(2 ** index)
