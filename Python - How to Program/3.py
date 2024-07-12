@@ -27,9 +27,9 @@ h) False
 i) False
 j) False
 
- '''
-
 '''
+
+
 # 3.3: Mileage Calculator
 
 # Initialize variables for the final mileage display
@@ -52,13 +52,13 @@ while True:
 
     # show mileage for the trip
     if miles == 0:
-        print("There was no travel on this trip. Cannot calculate mileage.\n\n")
+        print("There was no travel on this trip. Cannot calculate mileage.\n")
 
     elif gallons != 0:
-        print(f"The miles / gallon for this tank was {miles/gallons:.6f}.\n\n")
+        print(f"The miles / gallon for this tank was {miles/gallons:.6f}.\n")
 
     else:
-        print("It appears no gas was used on this trip. Congrats on your sustainable travel!\n\n")
+        print("It appears no gas was used on this trip. Congrats on your sustainable travel!\n")
 
     # add trip info to final mileage variables
     total_gallons += gallons
@@ -71,18 +71,17 @@ if total_miles == 0:
     print("There was no travel. Cannot calculate mileage.")
 
 elif total_gallons != 0:
-    print(f"The overall average miles/gallon was {total_miles/total_gallons:.6f}")
+    print(f"The overall average miles/gallon for this vehicle was {total_miles/total_gallons:.6f}")
 
 else:
-    print("No gas was used on any of your trips. It appears you've truly unlocked infinitely sustainable travel."
+    print("No gas was used on any of your trips. It appears you've truly unlocked infinitely sustainable travel. "
           "We will be seeing you soon.")
 
-print("\n\n\n\n")
+print("\n")
 
 # worth noting that this code does calculations with floats, which is a no - no
 
-'''
-'''
+
 # 3.4 Palindrome Checker
 
 # open a loop so the user can try again if their input is invalid
@@ -90,8 +89,6 @@ while True:
 
     # Create a variable to accept potential palindromes
     num = input("Enter a five-digit integer: ")
-
-    print()
 
     # Ensure the input follows the given parameters - delete this wrap to generalize
     if num.isdigit() and len(num) == 5:
@@ -110,7 +107,7 @@ while True:
             print("This checker only evaluates 5 digit integers\n")
             break
 
-'''
+print("\n")
 
 # 3.5 Binary to Decimal Converter
 
@@ -121,17 +118,65 @@ decimal = 0
 binary = input("Enter a binary number: ")
 index = len(binary) - 1
 
-
-def add(num1, num2):
-    sum = num1 +num2
-    return  sum
-
-
 # convert each binary digit to a decimal value based on its position and add it to the decimal total
 for digit in binary:
-    print(2 ** index)
     digit = int(digit) * (2 ** index)
     decimal += digit
     index -= 1
 
-print(decimal)
+print(f"This number in decimal form is {decimal}")
+
+print("\n")
+
+# 3.6 Factorials
+
+# a) calculate factorials
+def factorial(num):
+
+    # result variable
+    facto = 1
+
+    # if input is non-negative
+    if num > -1:
+
+        # calculate factorial
+        for i in range(1, num + 1):
+            facto *= i
+        return facto
+
+    else:
+        return "undefined"
+
+
+number = int(input("Enter a non-negative integer: "))
+print(f"The factorial of {number} is {factorial(number)}")
+
+print("\n")
+
+'''
+# b) estimate 'e'
+e = 1
+
+for n in range(1, 10):
+    e += 1/factorial(n)
+
+print(e)
+print()
+'''
+
+# c) compute e^x (highly inaccurate, again because of floats and rounding)
+
+e_x = 1
+x_count = 1
+x = int(input("to what power would you like to raise mathematical constant 'e'? "))
+print()
+
+for a in range(1, 10):
+    e_x += (x ** x_count) / factorial(a)
+    x_count += 1
+
+print(f"e^{x} = {e_x}")
+
+# 3.7 Asterisk Patterns with For loops
+#  3.8 Pythagorean Triples (when you feel like)
+

@@ -1,6 +1,6 @@
 # Ex. 2: Print multiple lines of code with 1 statement
 
-print("welcome\nto\n\nPython\n")
+print("welcome\nto\nPython!\n")
 
 
 # Ex. 3: Adding integers
@@ -25,7 +25,8 @@ print(
     '''This string also has "double" and 'single' quotes'\n'''
 )
 
-'''Self-review exercises
+'''
+Self-review exercises
 
 2.1
 a) print
@@ -50,7 +51,7 @@ h) true
 i) false. case matters in python
 j) false. escape character. escape sequence when paired
 k) true
-'''
+
 
 # 2.3: Order of Ops
 
@@ -68,7 +69,7 @@ print(27 * 12)
 print((3 * 9 * (3 + (9 * 3 / (3)))))
 
 print("\n")
-
+'''
 
 # 2.4: SPDQ
 
