@@ -32,7 +32,7 @@ def sieve_of_eratosthenes(gap):
     potentials = {}
     primes = []
 
-    for i in range(2, gap + 1):
+    for i in range(2, gap):
         potentials.update({i: True})
 
     for key, value in potentials.items():  # outer loop
@@ -51,7 +51,7 @@ def sieve_of_eratosthenes(gap):
 
 
 user_gap = int(input("Enter a number: "))
-print(f"There are {len(sieve_of_eratosthenes(user_gap))} prime numbers between 0 and {user_gap}")
+print(f"There are {len(sieve_of_eratosthenes(user_gap))} prime numbers between 0 and {user_gap}\n")
 
 
 # 5.6 Bubble Sort
@@ -78,11 +78,12 @@ def bubbleSort(list1):
 
 
 # Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
+arr = input("Enter a list of random, comma separated numbers: ").split(",")
 
+arr = list(map(int, arr))
 bubbleSort(arr)
 
-print(f"Sorted array: {arr}")
+print(f"BubbleSorted list: {arr}\n")
 
 
 
@@ -91,7 +92,7 @@ print(f"Sorted array: {arr}")
 def binarysearch(search_key, list2):
 
     if len(list2) == 1 and list2[0] != search_key:
-        return "\nItem is not in list"
+        return "\nThis number is not in the list"
 
     mid_index = len(list2)//2
     mid_value = list2[mid_index]
@@ -111,8 +112,8 @@ def binarysearch(search_key, list2):
 
 # Example call:
 import random
-example_list = sorted([random.randrange(1, 1000) for _i in range(20)])
-print(example_list)
+example_list = sorted([random.randrange(1, 1000) for _i in range(500)])
+print("I have a list containing 500 numbers between 0 and 1000")
 
 key = int(input("What number would you like to search this list for? "))
 
